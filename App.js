@@ -2,6 +2,9 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  
+  console.log("Did some changes ! ")
+  
   return (
     <View style={styles.container}>
       <Text>Hello World This is a test from Jabez</Text>
