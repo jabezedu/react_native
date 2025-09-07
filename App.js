@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, SafeAreaView , Image} from 'react-native';
+import { StyleSheet, Text, SafeAreaView , Image, TouchableOpacity} from 'react-native';
 
 export default function App() {
   
@@ -12,15 +12,19 @@ export default function App() {
   
   return (
     <SafeAreaView style={styles.container}>
-      <Text numberOfLines={1} onPress={()=> console.log("Text Clicked ")}>
+      <Text>
         Hello World This is a test from Jabez - A readlly really long text and I wanna make it some more long
       </Text>
-      <Image 
-        blurRadius={10}
-        fadeDuration={1000}
-        source={{
-        width : 200, height : 200,
-        uri : "https://picsum.dev/300/200"}}></Image>
+
+      <TouchableOpacity onPress={() => console.log("Image Tapped ")}>
+        <Image 
+          blurRadius={10}
+          fadeDuration={1000}
+          source={{
+          width : 200, height : 200,
+          uri : "https://picsum.dev/300/200"}}>
+        </Image>
+      </TouchableOpacity >
     </SafeAreaView>
   );
 }
